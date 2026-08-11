@@ -14,7 +14,7 @@ Logitech Flow 本身只负责键盘、鼠标、剪贴板在电脑之间切换，
 
 本方案把显示器切换拆成两部分：
 
-1. 在 Logitech Options+ 里给鼠标手势、按键或 Easy-Switch 相关动作绑定“打开文件”。
+1. 在 Logitech Options+ 里给鼠标手势、按键或 Easy-Switch 相关操作绑定“打开文件”。
 2. 这个文件是一个 `.bat` 脚本，脚本调用 ControlMyMonitor。
 3. ControlMyMonitor 通过显示器的 DDC/CI 功能写入 `VCP Code 60 / Input Select`，实现 DP/HDMI 输入源切换。
 
@@ -67,12 +67,12 @@ Possible Values: 15, 17, 18 ...
 2. 选择一个按钮、手势方向或 Easy-Switch 相关操作。
 3. 选择“打开文件”。
 4. 选择你的 `.bat` 脚本。
-5. 如果需要同时切换键鼠频道，给 MX Keys / MX Master 3S 配置相同目标电脑或同一个 Flow 方向。
+5. 如果需要同时切换键鼠频道，给键盘和鼠标配置相同目标电脑或同一个 Flow 方向。
 
-实测配置示例：
+配置示例：
 
 ```text
-设备：MX Keys + MX Master 3S
+设备：支持 Logitech Options+ 的键盘和鼠标
 动作：打开文件
 文件：切换显示器输入源的 .bat 脚本
 ```
@@ -93,9 +93,7 @@ examples/
   switch-to-computer-b.bat      通用模板：切到另一台电脑
   switch-back-to-computer-a.bat 通用模板：切回本电脑
 docs/
-  other-computer-ai-notes.md    给另一台电脑 AI/操作者的配置说明
-local/
-  desktop-to-laptop.bat         本机实测脚本，仅作参考
+  setup-notes.md                通用配置说明
 ```
 
 ## 注意
